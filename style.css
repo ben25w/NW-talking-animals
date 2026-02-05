@@ -40,14 +40,18 @@ h1 {
 }
 
 .video-card {
-  background: white;
+  background: linear-gradient(135deg, #b3e5fc, #fff9c4, #c8e6c9);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  padding: 20px;
+  text-align: center;
 }
 
 .video-card:hover {
@@ -55,21 +59,10 @@ h1 {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-.video-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  background: linear-gradient(135deg, #b3e5fc, #fff9c4);
-  display: block;
-}
-
 .video-card .student-name {
-  padding: 15px;
-  text-align: center;
   font-weight: bold;
   color: #5a7fb3;
-  background: linear-gradient(to right, #b3e5fc, #fff9c4, #c8e6c9);
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 /* Modal for video playback */
