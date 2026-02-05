@@ -1,3 +1,20 @@
+// Array of gradient colors (you can add more!)
+const GRADIENTS = [
+  'gradient-1',
+  'gradient-2',
+  'gradient-3',
+  'gradient-4',
+  'gradient-5',
+  'gradient-6',
+  'gradient-7',
+  'gradient-8'
+];
+
+// Function to get a random gradient
+function getRandomGradient() {
+  return GRADIENTS[Math.floor(Math.random() * GRADIENTS.length)];
+}
+
 // Function to extract Google Drive file ID from a shareable link
 function extractFileId(driveLink) {
   if (!driveLink) return null;
@@ -37,6 +54,10 @@ async function loadVideos() {
           // Create the card
           const card = document.createElement('div');
           card.className = 'video-card';
+          
+          // Add random gradient
+          const randomGradient = getRandomGradient();
+          card.classList.add(randomGradient);
           
           const videoEmbedUrl = createVideoEmbedUrl(videoFileId);
           
